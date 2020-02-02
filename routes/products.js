@@ -16,16 +16,21 @@ router.get('/', (req, res, next) => {
  * Insere um produto
  */
 router.post('/', (req, res, next) => {
+    const produto = {
+        nome: req.body.nome,
+        preco: req.body.preco
+    };
     res.status(201).send({
-        message: 'O produto foi criado'
+        message: 'O produto foi criado',
+        produtoCriado: produto
     });
 });
 
 /**
  * Return um produto exclusivo
  */
-router.get('/:id_product', (req, res, next) => {
-    const id = req.params.id_product
+router.get('/:id_produto', (req, res, next) => {
+    const id = req.params.id_produto
     if (id === 'especial') {
         res.status(200).send({
             message: 'Você descobriu um id especial',
@@ -42,7 +47,7 @@ router.get('/:id_product', (req, res, next) => {
 /**
  * Alterar um produto
  */
-router.patch('/:id_product', (req, res, next) => {
+router.patch('/:id_produto', (req, res, next) => {
     res.status(201).send({
         message: 'Produto alterado'
     })
@@ -51,7 +56,7 @@ router.patch('/:id_product', (req, res, next) => {
 /**
  * Deletando um produto
  */
-router.delete('/:id_product', (req, res, next) => {
+router.delete('/:id_produto', (req, res, next) => {
     res.status(200).send({
         message: 'Produto excluido'
     })
