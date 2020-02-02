@@ -16,19 +16,24 @@ router.get('/', (req, res, next) => {
  * Insere um pedido
  */
 router.post('/', (req, res, next) => {
+    const pedido = {
+        id_produto: req.body.id_produto,
+        quantidade: req.body.quantidade
+    }
     res.status(201).send({
-        message: 'O pedido foi criado'
+        message: 'O pedido foi criado',
+        pedidoCriado: pedido
     });
 });
 
 /**
  * Retorna os dados de um pedido
  */
-router.get('/:id_request', (req, res, next) => {
-    const id = req.params.id_request
+router.get('/:id_produto', (req, res, next) => {
+    const id = req.params.id_pedido
     res.status(200).send({
         message: 'Detalhes do pedido',
-        id_request: id
+        id_produto: id
     })
 
 
@@ -37,7 +42,7 @@ router.get('/:id_request', (req, res, next) => {
 /**
  * Deletando um pedido
  */
-router.delete('/:id_request', (req, res, next) => {
+router.delete('/:id_produto', (req, res, next) => {
     res.status(200).send({
         message: 'Pedido excluido'
     })
