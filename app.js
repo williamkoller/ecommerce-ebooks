@@ -3,8 +3,8 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-const routeProducts = require('./routes/products');
-const routeRequests = require('./routes/requests');
+const rotaProdutos = require('./routes/produtos');
+const rotaPedidos = require('./routes/pedidos');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false })); // apenas dados simples
@@ -25,8 +25,8 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/products', routeProducts);
-app.use('/requests', routeRequests);
+app.use('/produtos', rotaProdutos);
+app.use('/pedidos', rotaPedidos);
 
 // Quando não encontra a rota, entra aqui:
 app.use((req, res, next) => {
