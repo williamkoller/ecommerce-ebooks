@@ -23,8 +23,8 @@ router.get('/', (req, res, next) => {
                             nome: prod.nome,
                             preco: prod.preco,
                             request: {
-                                tipo: 'GET',
-                                descricao: 'Retorna os detalhes de um produto específico',
+                                type: 'GET',
+                                description: 'Retorna os detalhes de um produto específico',
                                 url: 'http://localhost:3000/products/' + prod.id_produto
                             }
                         }
@@ -55,8 +55,8 @@ router.post('/', (req, res, next) => {
                         nome: req.body.nome,
                         preco: req.body.preco,
                         request: {
-                            tipo: 'GET',
-                            descricao: 'Retorna todos os produtos',
+                            type: 'GET',
+                            description: 'Retorna todos os produtos',
                             url: 'http://localhost:3000/products'
                         }
                     }
@@ -91,8 +91,8 @@ router.get('/:id_produto', (req, res, next) => {
                         nome: result[0].nome,
                         preco: result[0].preco,
                         request: {
-                            tipo: 'GET',
-                            descricao: 'Retorna um produto',
+                            type: 'GET',
+                            description: 'Retorna um produto',
                             url: 'http://localhost:3000/products'
                         }
                     }
@@ -129,8 +129,8 @@ router.patch('/', (req, res, next) => {
                         nome: req.body.nome,
                         preco: req.body.preco,
                         request: {
-                            tipo: 'GET',
-                            descricao: 'Retorna os detalhes de um produto específico',
+                            type: 'GET',
+                            description: 'Retorna os detalhes de um produto específico',
                             url: 'http://localhost:3000/products/' + req.body.id_produto
                         }
                     }
@@ -156,8 +156,8 @@ router.delete('/', (req, res, next) => {
                 const response = {
                     message: 'Produto removido com sucesso',
                     request: {
-                        tipo: 'POST',
-                        descricao: 'Insere um produto',
+                        type: 'POST',
+                        description: 'Insere um produto',
                         url: 'http://localhost:3000/products',
                         body: {
                             nome: 'String',
