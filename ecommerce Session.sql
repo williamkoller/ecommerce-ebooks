@@ -1,2 +1,3 @@
-select * from produtos;
+select * from pedidos;
 
+select * from produtos;
