@@ -2,7 +2,7 @@
 
 ## Desenvolvendo API - REST com protocolos HTTP = ["GET", "DELETE", "PATCH", "POST"]
 
-### Utilizando algumas ferramentas
+#### Utilizando algumas ferramentas
 <ul>
   <li>Postman - API</li>
   <li>BodyParser - Trabalha com dados Simples</li>
@@ -13,8 +13,8 @@
   <li>NodeMon - Trabalha com "DotEnv"</li>
 </ul>
 
-#### Tratamentos de errors
-##### Quando não encontra a rota 
+##### Tratamentos de errors
+###### Quando não encontra a rota 
 
 ```
 app.use((req, res, next) => {
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 ```
-##### Envio da mensagem
+###### Envio da mensagem
 
 ```
 app.use((error, req, res, next) => {
