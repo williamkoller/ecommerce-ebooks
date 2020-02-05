@@ -37,6 +37,11 @@ app.use((error, req, res, next) => {
 });
 
 ```
+##### Baixando imagem do hub.docker.com
+```
+docker pull mariadb
+```
+
 ##### Utilizando docker para conexao com Database Mariadb 
 
 ```
