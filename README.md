@@ -37,4 +37,8 @@ app.use((error, req, res, next) => {
 });
 
 ```
+##### Utilizando docker para conexao com Database Mariadb 
 
+```
+docker run -p 3306:3306 --name mysql-mariadb -e MYSQL_ROOT_PASSWORD=root -d mariadb   
+```
