@@ -7,6 +7,11 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "nodemon server.js"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    },
     "keywords": [
         "node",
         "express"
@@ -17,6 +22,7 @@
         "bcrypt": "^3.0.8",
         "body-parser": "^1.19.0",
         "express": "^4.17.1",
+        "husky": "^4.2.3",
         "jsonwebtoken": "^8.5.1",
         "morgan": "^1.9.1",
         "multer": "^1.4.2",
