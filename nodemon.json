@@ -1,9 +1,9 @@
 {
     "env": {
-        "MYSQL_USER": "b70b3e4a64e68d",
-        "MYSQL_PASSWORD": "8146a405",
-        "MYSQL_DABATASE": "heroku_ff583e2ce9ed0b6",
-        "MYSQL_HOST": "us-cdbr-iron-east-04.cleardb.net",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "root",
+        "MYSQL_DABATASE": "ecommerce",
+        "MYSQL_HOST": "localhost",
         "MYSQL_PORT": 3306,
 
         "JWT_KEY": "segredo",
