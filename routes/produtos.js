@@ -5,7 +5,7 @@ const login = require('../middleware/login');
 const ProdutoController = require('../controllers/produtos-controller');
 const storage = multer.diskStorage({
     destination: function(req, file, callback) {
-        callback(null, './uploads/');
+        callback(null, './public/uploads');
     },
     filename: function(req, file, callback) {
         callback(null, new Date().toISOString() + file.originalname);
