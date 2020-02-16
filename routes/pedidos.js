@@ -11,7 +11,16 @@ router.get('/', (req, res, next) => {
     mysql.getConnection((error, conn) => {
         if (error) { return res.status(500).send({ error: error }) }
         conn.query(
-            'SELECT * FROM pedidos;',
+            `
+            SELECT pedidos.id_pedido,
+                pedidos.quantidade,
+                produtos.id_produto,
+                produtos.nome,
+                produtos.preco,
+                FROM pedidos
+                INNER JOIN produtos
+                ON produtos.id_produto = pedidos.id_produto;
+            `,
             (error, result, fields) => {
                 conn.release(); // libera a conexão
                 if (error) { return res.status(500).send({ error: error }) }
