@@ -13,29 +13,6 @@
   <li>NodeMon - Trabalha com "DotEnv"</li>
 </ul>
 
-##### Tratamentos de errors
-###### Quando não encontra a rota 
-
-```
-app.use((req, res, next) => {
-    const erro = new Error('Não encontrado');
-    erro.status = 404;
-    next(erro);
-});
-
-```
-###### Envio da mensagem
-
-```
-app.use((error, req, res, next) => {
-    res.status(error.status || 500)
-    return res.send({
-        erro: {
-            message: error.message
-        }
-    })
-});
-
 ```
 ##### Baixando imagem do hub.docker.com
 ```
