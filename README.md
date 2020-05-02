@@ -13,7 +13,6 @@
   <li>NodeMon - Trabalha com "DotEnv"</li>
 </ul>
 
-```
 ##### Baixando imagem do hub.docker.com
 ```
 docker pull mariadb
