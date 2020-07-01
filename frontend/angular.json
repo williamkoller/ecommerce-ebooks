@@ -33,7 +33,20 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/styles/bootstrap4/popper.js",
+              "src/assets/styles/bootstrap4/bootstrap.min.js",
+              "src/assets/plugins/greensock/TweenMax.min.js",
+              "src/assets/plugins/greensock/TimelineMax.min.js",
+              "src/assets/plugins/scrollmagic/ScrollMagic.min.js",
+              "src/assets/plugins/greensock/animation.gsap.min.js",
+              "src/assets/plugins/greensock/ScrollToPlugin.min.js",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
+              "src/assets/plugins/easing/easing.js",
+              "src/assets/plugins/Isotope/isotope.pkgd.min.js",
+              "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js",
+              "src/assets/plugins/parallax-js-master/parallax.min.js",
+              "src/assets/js/shop_custom.js"
             ]
           },
           "configurations": {
