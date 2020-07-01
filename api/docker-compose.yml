@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    mysqlsrv:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_USER: 'root'
+            MYSQL_ROOT_PASSWORD: 'root'
+            MYSQL_DATABASE: 'ecommerce'
+        ports:
+            - '3306:3306'
+        volumes:
+            - /home/william/dev-studeis/ecommerce-ebooks/api/:/var/lib/mysql
+        networks:
+            - mysql-compose-network
+
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
+        networks:
+            - mysql-compose-network
+
+networks:
+    mysql-compose-network:
+        driver: bridge
