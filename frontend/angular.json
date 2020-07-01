@@ -22,6 +22,13 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/animate.css",
+              "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css",
+              "src/assets/styles/shop_styles.css",
+              "src/assets/styles/shop_responsive.css",
               "src/styles.css"
             ],
             "scripts": [
