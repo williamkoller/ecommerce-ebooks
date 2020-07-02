@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'app-newsletter',
-  templateUrl: './newsletter.component.html',
-  styleUrls: ['./newsletter.component.css']
+	selector: 'app-newsletter',
+	templateUrl: './newsletter.component.html',
+	styleUrls: ['./newsletter.component.css'],
 })
 export class NewsletterComponent implements OnInit {
+	textNewsLetter = 'Você vai receber os melhores descontos'
+	permiteNewsLetter = false
+	email = 'teste@teste.com'
+	constructor() {
+		this.textNewsLetter
+	}
 
-  constructor() { }
+	ngOnInit(): void {
+		setTimeout(() => {
+			this.permiteNewsLetter = true
+		}, 5000)
+	}
 
-  ngOnInit(): void {
-  }
+	onSubmitNewsLetter() {
+		this.textNewsLetter = 'E-mail enviado'
+	}
 
+	onEmailEnter(event: Event) {
+		this.email = (<HTMLInputElement>event.target).value
+	}
 }
