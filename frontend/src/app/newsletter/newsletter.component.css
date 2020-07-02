@@ -1,3 +1,7 @@
 .newsletter_button:disabled {
 	background-color: gray;
 }
+
+.enviado {
+	background-color: green;
+}

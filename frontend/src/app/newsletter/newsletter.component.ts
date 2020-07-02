@@ -9,9 +9,8 @@ export class NewsletterComponent implements OnInit {
 	textNewsLetter = 'Você vai receber os melhores descontos'
 	permiteNewsLetter = false
 	email = 'teste@teste.com'
-	constructor() {
-		this.textNewsLetter
-	}
+	emailEnviado = false
+	constructor() {}
 
 	ngOnInit(): void {
 		setTimeout(() => {
@@ -21,6 +20,7 @@ export class NewsletterComponent implements OnInit {
 
 	onSubmitNewsLetter() {
 		this.textNewsLetter = 'E-mail enviado'
+		this.emailEnviado = true
 	}
 
 	onEmailEnter(event: Event) {

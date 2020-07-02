@@ -11,14 +11,31 @@
 						<div class="newsletter_icon">
 							<img src="images/send.png" alt="" />
 						</div>
-						<div class="newsletter_title">
+						<!-- <div
+							class="newsletter_title"
+							[ngStyle]="{ backgroundColor: getCor() }"
+						>
+							Sign up for Newsletter
+						</div> -->
+						<div
+							class="newsletter_title"
+							[ngClass]="{ enviado: emailEnviado }"
+						>
 							Sign up for Newsletter
 						</div>
-						<div class="newsletter_text">
+						<!-- <div class="newsletter_text">
 							<p>{{ textNewsLetter }}</p>
 						</div>
 						<div class="newsletter_text">
 							<p>{{ email }}</p>
+						</div> -->
+						<div class="newsletter_text">
+							<p *ngIf="emailEnviado; else naoEnviado">
+								E-mail enviado com sucesso: {{ email }}
+							</p>
+							<ng-template #naoEnviado>
+								<p>E-mail não enviado ainda</p>
+							</ng-template>
 						</div>
 					</div>
 					<div class="newsletter_content clearfix">
@@ -37,13 +54,13 @@
 						<!--
 							"Tow-Way-Databindings"
 							-->
-						<input
+						<!-- <input
 							type="email"
 							class="newsletter_input"
 							required="required"
 							placeholder="Enter your email address"
 							[(ngModel)]="email"
-						/>
+						/> -->
 
 						<button
 							class="newsletter_button"
