@@ -16,7 +16,9 @@ exports.getProdutos = async (req, res, next) => {
 						description:
 							'Retorna os detalhes de um produto específico',
 						url:
-							process.env.URL_API + 'produtos/' + prod.id_produto,
+							process.env.URL_API +
+							'/produtos/' +
+							prod.id_produto,
 					},
 				}
 			}),
@@ -46,7 +48,7 @@ exports.postProduto = async (req, res, next) => {
 				request: {
 					type: 'GET',
 					description: 'Retorna todos os produtos',
-					url: process.env.URL_API + 'produtos',
+					url: process.env.URL_API + '/produtos/',
 				},
 			},
 		}
@@ -74,7 +76,7 @@ exports.getOneProduto = async (req, res, next) => {
 				request: {
 					type: 'GET',
 					description: 'Retorna um produto',
-					url: process.env.URL_API + 'produtos',
+					url: process.env.URL_API + '/produtos/',
 				},
 			},
 		}
@@ -105,7 +107,9 @@ exports.updateProduto = async (req, res, next) => {
 					type: 'GET',
 					description: 'Retorna os detalhes de um produto específico',
 					url:
-						process.env.URL_API + 'produtos/' + req.body.id_produto,
+						process.env.URL_API +
+						'/produtos/' +
+						req.body.id_produto,
 				},
 			},
 		}
@@ -124,7 +128,7 @@ exports.deleteProduto = async (req, res, next) => {
 			request: {
 				type: 'POST',
 				description: 'Insere um produto',
-				url: process.env.URL_API + 'produtos',
+				url: process.env.URL_API + '/produtos/',
 				body: {
 					nome: 'String',
 					preco: 'Number',
