@@ -11,25 +11,23 @@ export class ShopContentComponent implements OnInit {
 
 	constructor(private productService: ProductService) {}
 
-	ngOnInit(): void {
+	ngOnInit() {
 		this.productService.getProdutos().subscribe(
 			(data) => {
-				console.log(data)
 				this.produtos = data['produtos']
 			},
 			(error) => {
 				console.log(error)
 			}
 		)
-		// this.produtos = []
-		// this.produtos.push({ nome: 'Bateria', preco: 170.4 })
-		// this.produtos.push({ nome: 'TV', preco: 1100.0 })
-		// this.produtos.push({ nome: 'Monitor', preco: 600.0 })
-		// this.produtos.push({ nome: 'Mouse', preco: 170.4 })
-		// this.produtos.push({ nome: 'Teclado', preco: 170.4 })
+		// this.produtos = new Array<{ nome, preco }>();
+		// this.produtos.push({ nome: 'Bateria', preco: 100.70 });
+		// this.produtos.push({ nome: 'Rádio', preco: 99.70 });
+		// this.produtos.push({ nome: 'TV', preco: 50.25 });
+		// this.produtos.push({ nome: 'Outra coisa', preco: 100.00 });
 	}
 
 	getQtdeProdutos(): number {
-		return this.produtos.length
+		return this.produtos
 	}
 }

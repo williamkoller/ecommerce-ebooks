@@ -15,8 +15,9 @@ import { ViewedComponent } from './viewed/viewed.component'
 import { BrandsComponent } from './brands/brands.component'
 import { NewsletterComponent } from './newsletter/newsletter.component'
 import { FooterComponent } from './footer/footer.component'
-import { CopyrightComponent } from './copyright/copyright.component'
+import { CopyrightComponent } from './product/product-item/copyright/copyright.component'
 import { HttpClientModule } from '@angular/common/http'
+import { ProductItemComponent } from './product/product-item/product-item.component'
 
 @NgModule({
 	declarations: [
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http'
 		NewsletterComponent,
 		FooterComponent,
 		CopyrightComponent,
+		ProductItemComponent,
 	],
 	imports: [BrowserModule, FormsModule, HttpClientModule],
 	providers: [],
