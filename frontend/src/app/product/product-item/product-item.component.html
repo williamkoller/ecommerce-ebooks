@@ -1,4 +1,6 @@
-<div class="product_item is_new">
+<div
+	class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center"
+>
 	<div class="product_border"></div>
 	<div
 		class="product_image d-flex flex-column align-items-center justify-content-center"
@@ -6,6 +8,8 @@
 		<img
 			[attr.src]="'http://localhost:3000/' + produto.imagem_produto"
 			alt=""
+			width="100"
+			height="100"
 		/>
 	</div>
 	<div class="product_content">

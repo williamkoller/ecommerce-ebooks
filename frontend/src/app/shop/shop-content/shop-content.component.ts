@@ -20,14 +20,9 @@ export class ShopContentComponent implements OnInit {
 				console.log(error)
 			}
 		)
-		// this.produtos = new Array<{ nome, preco }>();
-		// this.produtos.push({ nome: 'Bateria', preco: 100.70 });
-		// this.produtos.push({ nome: 'Rádio', preco: 99.70 });
-		// this.produtos.push({ nome: 'TV', preco: 50.25 });
-		// this.produtos.push({ nome: 'Outra coisa', preco: 100.00 });
 	}
 
 	getQtdeProdutos(): number {
-		return this.produtos
+		return this.produtos.length
 	}
 }
