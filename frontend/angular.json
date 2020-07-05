@@ -1,139 +1,139 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "frontend": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/frontend",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css",
-              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
-              "src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css",
-              "src/assets/plugins/OwlCarousel2-2.2.1/animate.css",
-              "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css",
-              "src/assets/styles/shop_styles.css",
-              "src/assets/styles/shop_responsive.css",
-              "src/styles.css"
-            ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/styles/bootstrap4/popper.js",
-              "src/assets/styles/bootstrap4/bootstrap.min.js",
-              "src/assets/plugins/greensock/TweenMax.min.js",
-              "src/assets/plugins/greensock/TimelineMax.min.js",
-              "src/assets/plugins/scrollmagic/ScrollMagic.min.js",
-              "src/assets/plugins/greensock/animation.gsap.min.js",
-              "src/assets/plugins/greensock/ScrollToPlugin.min.js",
-              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
-              "src/assets/plugins/easing/easing.js",
-              "src/assets/plugins/Isotope/isotope.pkgd.min.js",
-              "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js",
-              "src/assets/plugins/parallax-js-master/parallax.min.js",
-              "src/assets/js/shop_custom.js"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "frontend:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "frontend:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "frontend:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "frontend:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "frontend:serve:production"
-            }
-          }
-        }
-      }
-    }
-  },
-  "defaultProject": "frontend"
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "projects",
+	"projects": {
+		"frontend": {
+			"projectType": "application",
+			"schematics": {},
+			"root": "",
+			"sourceRoot": "src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:browser",
+					"options": {
+						"outputPath": "dist/frontend",
+						"index": "src/index.html",
+						"main": "src/main.ts",
+						"polyfills": "src/polyfills.ts",
+						"tsConfig": "tsconfig.app.json",
+						"aot": true,
+						"assets": ["src/favicon.ico", "src/assets"],
+						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"src/assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css",
+							"src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
+							"src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css",
+							"src/assets/plugins/OwlCarousel2-2.2.1/animate.css",
+							"src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css",
+							"src/assets/styles/shop_styles.css",
+							"src/assets/styles/shop_responsive.css",
+							"src/styles.css"
+						],
+						"scripts": [
+							"node_modules/jquery/dist/jquery.js",
+							"node_modules/bootstrap/dist/js/bootstrap.min.js",
+							"src/assets/styles/bootstrap4/popper.js",
+							"src/assets/styles/bootstrap4/bootstrap.min.js",
+							"src/assets/plugins/greensock/TweenMax.min.js",
+							"src/assets/plugins/greensock/TimelineMax.min.js",
+							"src/assets/plugins/scrollmagic/ScrollMagic.min.js",
+							"src/assets/plugins/greensock/animation.gsap.min.js",
+							"src/assets/plugins/greensock/ScrollToPlugin.min.js",
+							"src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
+							"src/assets/plugins/easing/easing.js",
+							"src/assets/plugins/Isotope/isotope.pkgd.min.js",
+							"src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js",
+							"src/assets/plugins/parallax-js-master/parallax.min.js",
+							"src/assets/js/shop_custom.js"
+						]
+					},
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"extractCss": true,
+							"namedChunks": false,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "6kb",
+									"maximumError": "10kb"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"options": {
+						"browserTarget": "frontend:build"
+					},
+					"configurations": {
+						"production": {
+							"browserTarget": "frontend:build:production"
+						}
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"browserTarget": "frontend:build"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"main": "src/test.ts",
+						"polyfills": "src/polyfills.ts",
+						"tsConfig": "tsconfig.spec.json",
+						"karmaConfig": "karma.conf.js",
+						"assets": ["src/favicon.ico", "src/assets"],
+						"styles": ["src/styles.css"],
+						"scripts": []
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"tsconfig.app.json",
+							"tsconfig.spec.json",
+							"e2e/tsconfig.json"
+						],
+						"exclude": ["**/node_modules/**"]
+					}
+				},
+				"e2e": {
+					"builder": "@angular-devkit/build-angular:protractor",
+					"options": {
+						"protractorConfig": "e2e/protractor.conf.js",
+						"devServerTarget": "frontend:serve"
+					},
+					"configurations": {
+						"production": {
+							"devServerTarget": "frontend:serve:production"
+						}
+					}
+				}
+			}
+		}
+	},
+	"defaultProject": "frontend"
 }
